@@ -1,0 +1,3 @@
+protein,model,phenotype,split,spearman,ndcg
+SaCas9,mavenn,SaCas9_mean,2vsrest,0.03,0.63
+SaCas9,mavenn,SaCas9_mean,3vsrest,0.16,0.48
