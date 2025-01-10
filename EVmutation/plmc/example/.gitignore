@@ -1,8 +1,0 @@
-**/*.EC
-**/*.eij
-**/*.params
-**/*.json
-**/*.txt
-pfam/*
-test/*
-debug/*
