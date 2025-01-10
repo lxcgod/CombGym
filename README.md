@@ -23,7 +23,7 @@ This project utilizes several models for analysis and prediction, including Ridg
   - Source: GVP-MSA by Lin Chen et al.
   - GitHub Link: [GVP-MSA](https://github.com/cl666666/GVP-MSA)
   - Provided Script:
-  - `gvpmutsplit.ipynb`: Splits data using a strategy based on `train_single2multi.py` from GVP-MSA, but without using  MSA.
+   - `gvpmutsplit.ipynb`: Splits data using a strategy based on `train_single2multi.py` from GVP-MSA, but without using  MSA.
 
 
 - **MAVE-NN**
@@ -37,7 +37,7 @@ This project utilizes several models for analysis and prediction, including Ridg
 - **DeepSequence**
   - Source: DeepSequence by Thomas A Hopf et al.
   - GitHub Link: [DeepSequence](https://github.com/debbiemarkslab/DeepSequence)
- - Provided Script:
+  - Provided Script:
     - `run_predict.py`: Used for making predictions.
 
 
