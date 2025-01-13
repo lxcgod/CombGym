@@ -16,7 +16,7 @@ This project utilizes several models for analysis and prediction, including Ridg
     - `split.ipynb`: Splits the data into training and testing sets.
     - `dictionary.ipynb`: Generates a dictionary to be added to the `train_all.py` file.
     - `run_train_all.sh`: Executes predictions on files within a directory in batch mode.
-    - `statistics.py`: Evaluates Spearman and NDCG metrics in batch mode.
+    - `evaluate.py`: Evaluates Spearman and NDCG metrics in batch mode.
 
 
 - **GVP-Mut**
