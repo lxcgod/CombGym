@@ -3,7 +3,7 @@
 declare -A model_vsrest
 model_vsrest=( ["ridge"]="1 2 3" ["cnn"]="1 2 3" ["esm1b"]="0 1 2 3" ["esm1v"]="0 1 2 3" )
 
-target_folder="/home/Lxc/FLIP/splits/Rhla/splits"
+target_folder="CombGym/FLIP/splits/SaCas9/splits"
 
 
 input_files=($(ls $target_folder/*.csv | xargs -n 1 basename | sed 's/\.csv$//'))

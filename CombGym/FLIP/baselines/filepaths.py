@@ -4,7 +4,7 @@ BASELINE_DIR = HOME_DIR + 'baselines/'
 DATA_DIR = HOME_DIR + 'splits/'
 
 EMBEDDING_DIR = 'embeddings/'
-RESULTS_DIR = '../FLIP_results/'
+RESULTS_DIR = '../results/'
 
 SEQ_MODELS = '../sequence_models' #link to sequence_paths submodule
 

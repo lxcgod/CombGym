@@ -13,9 +13,9 @@ pd.options.mode.chained_assignment = None  # default='warn'
 
 protein_name = 'SaCas9'
 model_name = 'mavenn'
-data_folder = 'MAVE-NN\mavenn\docs\datasets\SaCas9\splits'
-model_save_folder = '/home/Lxc/mavenn/mavenn/examples/baseline_parameters/'
-results_save_folder = '/home/Lxc/mavenn/mavenn/examples/baseline_results/SaCas9/'
+data_folder = 'CombGym/MAVE-NN/mavenn/mavenn/examples/datasets/SaCas9/splits'
+model_save_folder = 'CombGym/MAVE-NN/mavenn/mavenn/examples/models'
+results_save_folder = 'CombGym/MAVE-NN/mavenn/mavenn/examples/results/SaCas9'
 
 
 csv_files = [f for f in os.listdir(data_folder) if f.endswith('.csv') and '0vsrest' not in f]

@@ -89,7 +89,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     dataset_name = args.dataset_name
-    train_df = pd.read_csv('/Users/test/Desktop/GVP-MSA-master/GVP-MSA-master/input_data/{}/{}_single.csv'.format(dataset_name,dataset_name))
-    test_df = pd.read_csv('/Users/test/Desktop/GVP-MSA-master/GVP-MSA-master/input_data/{}/{}_muti.csv'.format(dataset_name,dataset_name))
+    train_df = pd.read_csv('CombGym/GVP-Mut/GVP-MSA-master/input_data/{}/{}_single.csv'.format(dataset_name,dataset_name))
+    test_df = pd.read_csv('CombGym/GVP-Mut/GVP-MSA-master/input_data/{}/{}_muti.csv'.format(dataset_name,dataset_name))
     test_df,spearman_v = runModel(train_df, test_df)
     print('for dataset {}, the spearman of the additive model is {}'.format(dataset_name,spearman_v))
