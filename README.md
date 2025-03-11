@@ -1,4 +1,4 @@
-# combgym
+# CombinGym
 
 
 ## Overview

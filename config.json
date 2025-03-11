@@ -1,0 +1,47 @@
+{
+  "last_updated": "2024",
+  "leaderboard": [
+    {
+      "rank": 1,
+      "model_name": "AlphaFold2",
+      "organization": "DeepMind",
+      "metrics": {
+        "rmsd": 0.96,
+        "gdt_ts": 92.5,
+        "tm_score": 0.89
+      },
+      "year": 2021,
+      "paper_reference": "jumper2021highly"
+    },
+    {
+      "rank": 2,
+      "model_name": "ESMFold",
+      "organization": "Meta AI",
+      "metrics": {
+        "rmsd": 1.2,
+        "gdt_ts": 89.3,
+        "tm_score": 0.87
+      },
+      "year": 2022,
+      "paper_reference": "lin2022language"
+    },
+    {
+      "rank": 3,
+      "model_name": "RoseTTAFold",
+      "organization": "Baker Lab",
+      "metrics": {
+        "rmsd": 1.4,
+        "gdt_ts": 87.1,
+        "tm_score": 0.85
+      },
+      "year": 2021,
+      "paper_reference": "baek2021accurate"
+    }
+  ],
+  "metric_descriptions": {
+    "rmsd": "Root Mean Square Deviation (Å) - 越低越好",
+    "gdt_ts": "Global Distance Test Total Score (0-100) - 越高越好",
+    "tm_score": "Template Modeling Score (0-1) - 越高越好"
+  },
+  "notes": "此排行榜包含主要的蛋白质结构预测模型基准测试结果。评分基于CASP14基准测试集。"
+} 
