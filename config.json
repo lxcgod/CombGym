@@ -1,47 +1,372 @@
 {
-  "last_updated": "2024",
-  "leaderboard": [
-    {
-      "rank": 1,
-      "model_name": "AlphaFold2",
-      "organization": "DeepMind",
-      "metrics": {
-        "rmsd": 0.96,
-        "gdt_ts": 92.5,
-        "tm_score": 0.89
+  "spearman_table": {
+    "table_name": "Spearman Metrics Table",
+    "models": [
+      {
+        "rank": 1,
+        "model": "MAVE-NN",
+        "model_type": "Sequence-label",
+        "avg_spearman": 0.475,
+        "spearman_by_split": {
+          "0-vs-rest": null,
+          "1-vs-rest": 0.265,
+          "2-vs-rest": 0.454,
+          "3-vs-rest": 0.615
+        },
+        "spearman_by_function": {
+          "Activity": 0.195,
+          "Binding": 0.717,
+          "Fluorescence": 0.578
+        },
+        "model_description": "Neural network-based information-theoretic framework for learning G-P maps on one-hot encoding",
+        "reference": "Tareen A, Kooshkbaghi M, Posfai A, et al. MAVE-NN: learning genotype-phenotype maps from multiplex assays of variant effect[J]. Genome biology, 2022, 23(1): 98.",
+        "reference_url": "https://genomebiology.biomedcentral.com/articles/10.1186/s13059-022-02661-7"
       },
-      "year": 2021,
-      "paper_reference": "jumper2021highly"
-    },
-    {
-      "rank": 2,
-      "model_name": "ESMFold",
-      "organization": "Meta AI",
-      "metrics": {
-        "rmsd": 1.2,
-        "gdt_ts": 89.3,
-        "tm_score": 0.87
+      {
+        "rank": 2,
+        "model": "GVP-Mut",
+        "model_type": "Structure-based",
+        "avg_spearman": 0.474,
+        "spearman_by_split": {
+          "0-vs-rest": null,
+          "1-vs-rest": 0.309,
+          "2-vs-rest": 0.519,
+          "3-vs-rest": 0.625
+        },
+        "spearman_by_function": {
+          "Activity": 0.211,
+          "Binding": 0.711,
+          "Fluorescence": 0.565
+        },
+        "model_description": "Utilizes a Geometric Vector Perceptron architecture to extract feature from structure",
+        "reference": "Chen L, Zhang Z, Li Z, et al. Learning protein fitness landscapes with deep mutational scanning data from multiple sources[J]. Cell Systems, 2023, 14(8): 706-721. e5.",
+        "reference_url": "https://www.cell.com/cell-systems/fulltext/S2405-4712(23)00210-7"
       },
-      "year": 2022,
-      "paper_reference": "lin2022language"
-    },
-    {
-      "rank": 3,
-      "model_name": "RoseTTAFold",
-      "organization": "Baker Lab",
-      "metrics": {
-        "rmsd": 1.4,
-        "gdt_ts": 87.1,
-        "tm_score": 0.85
+      {
+        "rank": 3,
+        "model": "Ridge",
+        "model_type": "Sequence-label",
+        "avg_spearman": 0.440,
+        "spearman_by_split": {
+          "0-vs-rest": null,
+          "1-vs-rest": 0.302,
+          "2-vs-rest": 0.476,
+          "3-vs-rest": 0.556
+        },
+        "spearman_by_function": {
+          "Activity": 0.174,
+          "Binding": 0.686,
+          "Fluorescence": 0.546
+        },
+        "model_description": "Ridge regression model on one-hot encoding",
+        "reference": "Dallago C, Mou J, Johnston K E, et al. FLIP: Benchmark tasks in fitness landscape inference for proteins[J]. bioRxiv, 2021: 2021.11. 09.467890.",
+        "reference_url": "https://www.biorxiv.org/content/10.1101/2021.11.09.467890.abstract"
       },
-      "year": 2021,
-      "paper_reference": "baek2021accurate"
-    }
-  ],
-  "metric_descriptions": {
-    "rmsd": "Root Mean Square Deviation (Å) - 越低越好",
-    "gdt_ts": "Global Distance Test Total Score (0-100) - 越高越好",
-    "tm_score": "Template Modeling Score (0-1) - 越高越好"
+      {
+        "rank": 4,
+        "model": "CNN",
+        "model_type": "Sequence-label",
+        "avg_spearman": 0.315,
+        "spearman_by_split": {
+          "0-vs-rest": null,
+          "1-vs-rest": 0.117,
+          "2-vs-rest": 0.373,
+          "3-vs-rest": 0.475
+        },
+        "spearman_by_function": {
+          "Activity": 0.090,
+          "Binding": 0.453,
+          "Fluorescence": 0.470
+        },
+        "model_description": "Simple convolutional network on one-hot encoding",
+        "reference": "Dallago C, Mou J, Johnston K E, et al. FLIP: Benchmark tasks in fitness landscape inference for proteins[J]. bioRxiv, 2021: 2021.11. 09.467890.",
+        "reference_url": "https://www.biorxiv.org/content/10.1101/2021.11.09.467890.abstract"
+      },
+      {
+        "rank": 5,
+        "model": "ESM-1b",
+        "model_type": "Protein language model",
+        "avg_spearman": 0.304,
+        "spearman_by_split": {
+          "0-vs-rest": 0.078,
+          "1-vs-rest": 0.275,
+          "2-vs-rest": 0.381,
+          "3-vs-rest": 0.534
+        },
+        "spearman_by_function": {
+          "Activity": 0.149,
+          "Binding": 0.509,
+          "Fluorescence": 0.304
+        },
+        "model_description": "Model with a Transformer encoder architecture trained with a Masked-Language Modeling objective on UniRef50",
+        "reference": "Rives, A., Goyal, S., Meier, J., Guo, D., Ott, M., Zitnick, C.L., Ma, J., & Fergus, R. (2019). Biological structure and function emerge from scaling unsupervised learning to 250 million protein sequences. Proceedings of the National Academy of Sciences of the United States of America, 118.",
+        "reference_url": "https://www.pnas.org/doi/full/10.1073/pnas.2016239118"
+      },
+      {
+        "rank": 6,
+        "model": "ESM-1v",
+        "model_type": "Protein language model",
+        "avg_spearman": 0.270,
+        "spearman_by_split": {
+          "0-vs-rest": 0.084,
+          "1-vs-rest": 0.211,
+          "2-vs-rest": 0.324,
+          "3-vs-rest": 0.513
+        },
+        "spearman_by_function": {
+          "Activity": 0.138,
+          "Binding": 0.304,
+          "Fluorescence": 0.408
+        },
+        "model_description": "Model with a Transformer encoder architecture trained with a Masked-Language Modeling objective on UniRef90",
+        "reference": "Meier, J., Rao, R., Verkuil, R., Liu, J., Sercu, T., & Rives, A. (2021). Language models enable zero-shot prediction of the effects of mutations on protein function. NeurIPS.",
+        "reference_url": "https://proceedings.neurips.cc/paper_files/paper/2021/file/f51338d736f95dd42427296047067694-Paper.pdf"
+      },
+      {
+        "rank": 7,
+        "model": "EVmutation",
+        "model_type": "Alignment-based model",
+        "avg_spearman": -0.002,
+        "spearman_by_split": {
+          "0-vs-rest": 0.019,
+          "1-vs-rest": 0.014,
+          "2-vs-rest": 0.011,
+          "3-vs-rest": -0.063
+        },
+        "spearman_by_function": {
+          "Activity": 0.206,
+          "Binding": -0.370,
+          "Fluorescence": 0.094
+        },
+        "model_description": "Models pairwise evolutionary couplings between protein sequences using a Potts model",
+        "reference": "Hopf, T.A., Ingraham, J., Poelwijk, F.J., Schärfe, C.P., Springer, M., Sander, C., & Marks, D.S. (2017). Mutation effects predicted from sequence co-variation. Nature Biotechnology, 35, 128-135.",
+        "reference_url": "https://www.nature.com/articles/nbt.3769"
+      },
+      {
+        "rank": 8,
+        "model": "BLOSUM62",
+        "model_type": "Substitution-based model",
+        "avg_spearman": -0.011,
+        "spearman_by_split": {
+          "0-vs-rest": 0.012,
+          "1-vs-rest": 0.006,
+          "2-vs-rest": -0.012,
+          "3-vs-rest": -0.061
+        },
+        "spearman_by_function": {
+          "Activity": 0.112,
+          "Binding": -0.399,
+          "Fluorescence": 0.214
+        },
+        "model_description": "BLOSUM62-score relative to wild-type",
+        "reference": "Dallago C, Mou J, Johnston K E, et al. FLIP: Benchmark tasks in fitness landscape inference for proteins[J]. bioRxiv, 2021: 2021.11. 09.467890.",
+        "reference_url": "https://www.biorxiv.org/content/10.1101/2021.11.09.467890.abstract"
+      },
+      {
+        "rank": 9,
+        "model": "DeepSequence",
+        "model_type": "Alignment-based model",
+        "avg_spearman": -0.018,
+        "spearman_by_split": {
+          "0-vs-rest": -0.008,
+          "1-vs-rest": -0.011,
+          "2-vs-rest": -0.001,
+          "3-vs-rest": -0.060
+        },
+        "spearman_by_function": {
+          "Activity": 0.167,
+          "Binding": -0.374,
+          "Fluorescence": 0.097
+        },
+        "model_description": "Uses a VAE architecture to learn higher-order non-linear evolutionary constraints within protein family",
+        "reference": "Riesselman, A.J., Ingraham, J., & Marks, D.S. (2018). Deep generative models of genetic variation capture the effects of mutations. Nature Methods, 15, 816-822.",
+        "reference_url": "https://www.nature.com/articles/s41592-018-0138-4"
+      }
+    ]
   },
-  "notes": "此排行榜包含主要的蛋白质结构预测模型基准测试结果。评分基于CASP14基准测试集。"
+  "ndcg_table": {
+    "table_name": "NDCG Metrics Table",
+    "models": [
+      {
+        "rank": 1,
+        "model": "GVP-Mut",
+        "model_type": "Structure-based",
+        "avg_ndcg": 0.727,
+        "ndcg_by_split": {
+          "0-vs-rest": null,
+          "1-vs-rest": 0.636,
+          "2-vs-rest": 0.730,
+          "3-vs-rest": 0.841
+        },
+        "ndcg_by_function": {
+          "Activity": 0.650,
+          "Binding": 0.828,
+          "Fluorescence": 0.724
+        },
+        "model_description": "Utilizes a Geometric Vector Perceptron architecture to extract feature from structure",
+        "reference": "Chen L, Zhang Z, Li Z, et al. Learning protein fitness landscapes with deep mutational scanning data from multiple sources[J]. Cell Systems, 2023, 14(8): 706-721. e5.",
+        "reference_url": "https://www.cell.com/cell-systems/fulltext/S2405-4712(23)00210-7"
+      },
+      {
+        "rank": 2,
+        "model": "Ridge",
+        "model_type": "Sequence-label",
+        "avg_ndcg": 0.685,
+        "ndcg_by_split": {
+          "0-vs-rest": null,
+          "1-vs-rest": 0.570,
+          "2-vs-rest": 0.711,
+          "3-vs-rest": 0.800
+        },
+        "ndcg_by_function": {
+          "Activity": 0.577,
+          "Binding": 0.804,
+          "Fluorescence": 0.702
+        },
+        "model_description": "Ridge regression model on one-hot encoding",
+        "reference": "Dallago C, Mou J, Johnston K E, et al. FLIP: Benchmark tasks in fitness landscape inference for proteins[J]. bioRxiv, 2021: 2021.11. 09.467890.",
+        "reference_url": "https://www.biorxiv.org/content/10.1101/2021.11.09.467890.abstract"
+      },
+      {
+        "rank": 3,
+        "model": "MAVE-NN",
+        "model_type": "Sequence-label",
+        "avg_ndcg": 0.684,
+        "ndcg_by_split": {
+          "0-vs-rest": null,
+          "1-vs-rest": 0.504,
+          "2-vs-rest": 0.678,
+          "3-vs-rest": 0.789
+        },
+        "ndcg_by_function": {
+          "Activity": 0.554,
+          "Binding": 0.775,
+          "Fluorescence": 0.756
+        },
+        "model_description": "Neural network-based information-theoretic framework for learning G-P maps on one-hot encoding",
+        "reference": "Tareen A, Kooshkbaghi M, Posfai A, et al. MAVE-NN: learning genotype-phenotype maps from multiplex assays of variant effect[J]. Genome biology, 2022, 23(1): 98.",
+        "reference_url": "https://genomebiology.biomedcentral.com/articles/10.1186/s13059-022-02661-7"
+      },
+      {
+        "rank": 4,
+        "model": "CNN",
+        "model_type": "Sequence-label",
+        "avg_ndcg": 0.637,
+        "ndcg_by_split": {
+          "0-vs-rest": null,
+          "1-vs-rest": 0.522,
+          "2-vs-rest": 0.663,
+          "3-vs-rest": 0.741
+        },
+        "ndcg_by_function": {
+          "Activity": 0.535,
+          "Binding": 0.748,
+          "Fluorescence": 0.663
+        },
+        "model_description": "Simple convolutional network on one-hot encoding",
+        "reference": "Dallago C, Mou J, Johnston K E, et al. FLIP: Benchmark tasks in fitness landscape inference for proteins[J]. bioRxiv, 2021: 2021.11. 09.467890.",
+        "reference_url": "https://www.biorxiv.org/content/10.1101/2021.11.09.467890.abstract"
+      },
+      {
+        "rank": 5,
+        "model": "ESM-1b",
+        "model_type": "Protein language model",
+        "avg_ndcg": 0.609,
+        "ndcg_by_split": {
+          "0-vs-rest": 0.501,
+          "1-vs-rest": 0.588,
+          "2-vs-rest": 0.643,
+          "3-vs-rest": 0.731
+        },
+        "ndcg_by_function": {
+          "Activity": 0.481,
+          "Binding": 0.766,
+          "Fluorescence": 0.622
+        },
+        "model_description": "Model with a Transformer encoder architecture trained with a Masked-Language Modeling objective on UniRef50",
+        "reference": "Rives, A., Goyal, S., Meier, J., Guo, D., Ott, M., Zitnick, C.L., Ma, J., & Fergus, R. (2019). Biological structure and function emerge from scaling unsupervised learning to 250 million protein sequences. Proceedings of the National Academy of Sciences of the United States of America, 118.",
+        "reference_url": "https://www.pnas.org/doi/full/10.1073/pnas.2016239118"
+      },
+      {
+        "rank": 6,
+        "model": "ESM-1v",
+        "model_type": "Protein language model",
+        "avg_ndcg": 0.565,
+        "ndcg_by_split": {
+          "0-vs-rest": 0.426,
+          "1-vs-rest": 0.536,
+          "2-vs-rest": 0.603,
+          "3-vs-rest": 0.731
+        },
+        "ndcg_by_function": {
+          "Activity": 0.473,
+          "Binding": 0.683,
+          "Fluorescence": 0.568
+        },
+        "model_description": "Model with a Transformer encoder architecture trained with a Masked-Language Modeling objective on UniRef90",
+        "reference": "Meier, J., Rao, R., Verkuil, R., Liu, J., Sercu, T., & Rives, A. (2021). Language models enable zero-shot prediction of the effects of mutations on protein function. NeurIPS.",
+        "reference_url": "https://proceedings.neurips.cc/paper_files/paper/2021/file/f51338d736f95dd42427296047067694-Paper.pdf"
+      },
+      {
+        "rank": 7,
+        "model": "EVmutation",
+        "model_type": "Alignment-based model",
+        "avg_ndcg": 0.432,
+        "ndcg_by_split": {
+          "0-vs-rest": 0.440,
+          "1-vs-rest": 0.424,
+          "2-vs-rest": 0.414,
+          "3-vs-rest": 0.455
+        },
+        "ndcg_by_function": {
+          "Activity": 0.540,
+          "Binding": 0.246,
+          "Fluorescence": 0.476
+        },
+        "model_description": "Models pairwise evolutionary couplings between protein sequences using a Potts model",
+        "reference": "Hopf, T.A., Ingraham, J., Poelwijk, F.J., Schärfe, C.P., Springer, M., Sander, C., & Marks, D.S. (2017). Mutation effects predicted from sequence co-variation. Nature Biotechnology, 35, 128-135.",
+        "reference_url": "https://www.nature.com/articles/nbt.3769"
+      },
+      {
+        "rank": 8,
+        "model": "BLOSUM62",
+        "model_type": "Substitution-based model",
+        "avg_ndcg": 0.412,
+        "ndcg_by_split": {
+          "0-vs-rest": 0.457,
+          "1-vs-rest": 0.425,
+          "2-vs-rest": 0.358,
+          "3-vs-rest": 0.409
+        },
+        "ndcg_by_function": {
+          "Activity": 0.468,
+          "Binding": 0.260,
+          "Fluorescence": 0.493
+        },
+        "model_description": "BLOSUM62-score relative to wild-type",
+        "reference": "Dallago C, Mou J, Johnston K E, et al. FLIP: Benchmark tasks in fitness landscape inference for proteins[J]. bioRxiv, 2021: 2021.11. 09.467890.",
+        "reference_url": "https://www.biorxiv.org/content/10.1101/2021.11.09.467890.abstract"
+      },
+      {
+        "rank": 9,
+        "model": "DeepSequence",
+        "model_type": "Alignment-based model",
+        "avg_ndcg": 0.402,
+        "ndcg_by_split": {
+          "0-vs-rest": 0.364,
+          "1-vs-rest": 0.384,
+          "2-vs-rest": 0.418,
+          "3-vs-rest": 0.451
+        },
+        "ndcg_by_function": {
+          "Activity": 0.446,
+          "Binding": 0.282,
+          "Fluorescence": 0.463
+        },
+        "model_description": "Uses a VAE architecture to learn higher-order non-linear evolutionary constraints within protein family",
+        "reference": "Riesselman, A.J., Ingraham, J., & Marks, D.S. (2018). Deep generative models of genetic variation capture the effects of mutations. Nature Methods, 15, 816-822.",
+        "reference_url": "https://www.nature.com/articles/s41592-018-0138-4"
+      }
+    ]
+  }
 } 
